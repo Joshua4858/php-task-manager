@@ -7,11 +7,9 @@ class TaskManager {
         $this->storagePath = $storagePath;
         $this->tasks = loadFromJsonFile($this->storagePath);
 
-
         if(!is_array($this->tasks)){
             $this->tasks = [];
         }
-
     }
 
     private function saveTasks(): void {
