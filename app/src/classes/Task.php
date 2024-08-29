@@ -6,8 +6,8 @@ class Task {
     public $description;
     public $isComplete;
 
-    function __construct($id, $title, $description, $isComplete) {
-        $this->id = $id;
+    function __construct($title, $description, $isComplete) {
+        $this->id = uniqid();
         $this->title = $title;
         $this->description = $description;
         $this->isComplete = $isComplete;

@@ -5,6 +5,9 @@ require_once 'classes/Task.php';
 
 $taskManager = new TaskManager('jsonTasks.json');
 
-$newTask = new Task();
-$taskManager->addTask();
+$newTask = new Task("task1", "task description", false);
+
+$taskManager->addTask($newTask);
+
+$taskManager->listTasks();
 
