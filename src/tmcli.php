@@ -37,6 +37,14 @@ switch ($command) {
         }
         break;
     case 'view':
+        $allTasks = $taskManager->listTasks();
+        if(isset($argv[2])) {
+            $task = $allTasks[$argv[2]];
+            echo "ID: {$task['id']}, Title: {$task['title']}, Description: {$task['description']}, Completed: " . ($task['isComplete'] ? 'Yes' : 'No') . ", Created at: {$task['createdAt']}" . "\n";
+        }else {
+            echo "Please provide <task_id> as 2nd argument e.g. php tmcli.php view <id>\n";
+        }
+
         break;
     case 'update';
         break;
