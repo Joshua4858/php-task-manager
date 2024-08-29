@@ -5,12 +5,14 @@ class Task {
     public $title;
     public $description;
     public $isComplete;
+    public $createdAt;
 
     function __construct($title, $description, $isComplete) {
         $this->id = uniqid();
         $this->title = $title;
         $this->description = $description;
         $this->isComplete = $isComplete;
+        $this->createdAt = date('Y-m-d H:i:s');
     }
 
     public function markAsComplete(): void {
