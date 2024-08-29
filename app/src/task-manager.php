@@ -9,5 +9,5 @@ $newTask = new Task("task1", "task description", false);
 
 $taskManager->addTask($newTask);
 
-$taskManager->listTasks();
+print_r($taskManager->listTasks());
 
