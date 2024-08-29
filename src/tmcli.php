@@ -42,6 +42,9 @@ switch ($command) {
         break;
     case 'delete';
         break;
+    case '--help' || '-h';
+        displayUsage();
+        break;
     default:
         echo "Unknown command.\n";
         displayUsage();
