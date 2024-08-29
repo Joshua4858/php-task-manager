@@ -18,7 +18,7 @@ The PHP Task Manager is a simple CLI-based task management application. It allow
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/php-task-manager.git
+    git clone https://github.com/yourusername/php-tmcli.git
     ```
 
 2. **Navigate to the Project Directory**
@@ -44,7 +44,7 @@ The PHP Task Manager is a simple CLI-based task management application. It allow
 2. **Run the PHP Script**
 
     ```bash
-    php task-manager.php
+    php tmcli.php
     ```
 
 ### Command Line Interface
@@ -54,31 +54,31 @@ The application supports basic command-line operations. Here’s how you can use
 - **Add a Task**
 
     ```bash
-    php task-manager.php add "Task Title" "Task Description"
+    php tmcli.php add "Task Title" "Task Description"
     ```
 
 - **List Tasks**
 
     ```bash
-    php task-manager.php list
+    php tmcli.php list
     ```
 
 - **View a Task**
 
     ```bash
-    php task-manager.php view <task_id>
+    php tmcli.php view <task_id>
     ```
 
 - **Update a Task**
 
     ```bash
-    php task-manager.php update <task_id> "New Title" "New Description"
+    php tmcli.php update <task_id> "New Title" "New Description"
     ```
 
 - **Delete a Task**
 
     ```bash
-    php task-manager.php delete <task_id>
+    php tmcli.php delete <task_id>
     ```
 
 ## Example
@@ -88,5 +88,5 @@ The application supports basic command-line operations. Here’s how you can use
 To add a new task:
 
 ```bash
-php task-manager.php add "Finish Homework" "Complete the math homework by tomorrow"
+php tmcli.php add "Finish Homework" "Complete the math homework by tomorrow"
 
