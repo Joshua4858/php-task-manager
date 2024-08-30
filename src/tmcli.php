@@ -9,9 +9,9 @@ $taskManager = new TaskManager('jsonTasks.json');
 function displayUsage() {
     "Usage:\n";
     echo " php tmcli.php list <options>\n";
-    echo " php tmcli.php add <title> <description> <isComplete\n";
+    echo " php tmcli.php add <title> <description> <isComplete>\n";
     echo " php tmcli.php view <task_id>\n";
-    echo " php tmcli.php update <task_id> <title> <description> <isComplete\n";
+    echo " php tmcli.php update <task_id> <title> <description> <isComplete>\n";
     echo " php tmcli.php delete <task_id>\n";
     echo "OPTIONS: \n [-td]  displays date time of task\n";
 }
