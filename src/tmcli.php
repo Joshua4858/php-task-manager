@@ -50,11 +50,11 @@ switch ($command) {
     case 'update';
         if(isset($argv[2]) && (isset($argv[3]) || isset($argv[4]) || isset($argv[5]))) {
             // if we find a id 
-            $taskToUpdate = $taskManager->listTasks()[$argv[2]];
+            $taskToUpdate = $taskManager->getTask($argv[2]);
 
-            $taskToUpdate->title = $argv[3];
-            $taskToUpdate->description = $argv[4];
-            $taskToUpdate->isComplete = $argv[5];
+            $taskToUpdate['title'] = $argv[3];
+            $taskToUpdate['description'] = $argv[4];
+            $taskToUpdate['isComplete'] = $argv[5];
 
             $taskManager->updateTask($taskToUpdate);
         }else {
@@ -66,7 +66,7 @@ switch ($command) {
         if(isset($argv[2]) || isset($argv[3]) || isset($argv[4])) {
             $title = $argv[2];
             $description = $argv[3];
-            $isComplete = $argv[4] == "false" ? false : true;
+            $isComplete = $argv[4] == ("true" || "yes" || "y") ? true : false;
             
             $newTask = new Task($title,$description,$isComplete);
             $taskManager->addTask($newTask);

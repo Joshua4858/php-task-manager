@@ -21,7 +21,7 @@ class TaskManager {
         $this->saveTasks();
     }
 
-    public function getTask(int $taskId): ?Task {
+    public function getTask(string $taskId): array {
         return $this->tasks[$taskId] ?? null;
     }
 
@@ -29,10 +29,10 @@ class TaskManager {
         return $this->tasks;
     }
 
-    public function updateTask(Task $task): void {
-        if(isset($this->tasks[$task->id])) {
+    public function updateTask(array $task): void {
+        if(isset($this->tasks[$task['id']])) {
             try {
-                $this->tasks[$task->id] = $task;
+                $this->tasks[$task['id']] = $task;
                 $this->saveTasks();
 
             } catch (Exception $e) {
@@ -41,7 +41,7 @@ class TaskManager {
         }
     }
 
-    public function deleteTask(int $taskId): void {
+    public function deleteTask(string $taskId): void {
         try {
             if(isset($this->tasks[$taskId])) {
                 unset($this->tasks[$taskId]);
